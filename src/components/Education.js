@@ -22,7 +22,7 @@ class Education extends React.Component {
         <h1>Education</h1>
         <form>
           {isEditing ? (
-            <div>
+            <div id="form">
               <label type="text" htmlFor="school">
                 University Name/Highschool or Equivalent:
               </label>
