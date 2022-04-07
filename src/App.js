@@ -23,14 +23,14 @@ class App extends React.Component {
   render() {
     const { isEditing } = this.state;
     return (
-      <div>
-        <button onClick={this.toggleIsEditing}>
-          {isEditing ? "Save" : "Edit"}
-        </button>
+      <div id="section">
         <Header />
         <General isEditing={isEditing} />
         <Education isEditing={isEditing} />
-        {/* <Experience /> */}
+        <Experience isEditing={isEditing} />
+        <button id="submit" onClick={this.toggleIsEditing}>
+          {isEditing ? "Save" : "Edit"}
+        </button>
       </div>
     );
   }
