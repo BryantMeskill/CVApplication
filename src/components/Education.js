@@ -19,10 +19,10 @@ class Education extends React.Component {
     const { isEditing } = this.props;
     return (
       <div id="section">
-        <h1>Education</h1>
+        <h1 id="subtitle">Education</h1>
         <form>
           {isEditing ? (
-            <div id="form">
+            <div id="inputContainer">
               <label type="text" htmlFor="school">
                 University Name/Highschool or Equivalent:
               </label>
@@ -49,10 +49,10 @@ class Education extends React.Component {
               />
             </div>
           ) : (
-            <div>
-              {school}
-              {major}
-              {date}
+            <div id="userInput">
+              <text>University Name/Highschool or Equivalent: {school}</text>
+              <text>Major/Expertise: {major}</text>
+              <text>Date(s) attended: {date}</text>
             </div>
           )}
         </form>
