@@ -17,29 +17,29 @@ class Experience extends React.Component {
     const { company, position, tasks, worked } = this.state;
     return (
       <div id="section">
-        <h1>Experience</h1>
+        <h1 id="subtitle">Experience</h1>
         <form>
           {isEditing ? (
-            <div id="form">
-              <label htmlFor="company">Company:</label>
+            <div id="inputContainer">
+              <label htmlFor="company">Company Name:</label>
               <input
                 id="company"
                 value={company.value}
                 onChange={this.handleChange}
               />
-              <label htmlFor="position">Positon:</label>
+              <label htmlFor="position">Positon/Title:</label>
               <input
                 id="position"
                 value={position.value}
                 onChange={this.handleChange}
               />
-              <label htmlFor="tasks">Tasks of your job:</label>
+              <label htmlFor="tasks">Job Duties:</label>
               <input
                 id="tasks"
                 value={tasks.value}
                 onChange={this.handleChange}
               />
-              <label htmlFor="worked">Years Worked:</label>
+              <label htmlFor="worked">Year(s) Worked:</label>
               <input
                 id="worked"
                 value={worked.value}
@@ -47,11 +47,11 @@ class Experience extends React.Component {
               />
             </div>
           ) : (
-            <div>
-              {company}
-              {position}
-              {tasks}
-              {worked}
+            <div id="userInput">
+              <text>Company Name: {company}</text>
+              <text>Position/Title: {position}</text>
+              <text>Job Duties: {tasks}</text>
+              <text>Year(s) Worked: {worked}</text>
             </div>
           )}
         </form>
