@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import General from "./components/General";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 import "./styles/app.css";
 
 class App extends React.Component {
@@ -31,6 +32,7 @@ class App extends React.Component {
         <button id="submit" onClick={this.toggleIsEditing}>
           {isEditing ? "Save" : "Edit"}
         </button>
+        <Footer />
       </div>
     );
   }
