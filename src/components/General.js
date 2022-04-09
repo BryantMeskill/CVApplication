@@ -15,8 +15,6 @@ class General extends React.Component {
 
   handleChange = (e) => {
     this.setState({
-      //should allow us to use a single handleChange method for all onChange listeners
-      //but isn't working
       [e.target.name]: e.target.value,
     });
   };
@@ -27,38 +25,40 @@ class General extends React.Component {
 
     return (
       <div id="section">
-        <h1>General</h1>
+        <h1 id="subtitle">General</h1>
         <form>
           {isEditing ? (
-            <div id="form">
+            <div id="inputContainer">
               <label htmlFor="userName">Name:</label>
               <input
+                name="userName"
                 type="text"
                 id="userName"
-                //doesn't show text in input unless .value is added?
-                value={userName.value}
+                value={userName}
                 onChange={this.handleChange}
               />
               <label htmlFor="email">E-mail:</label>
               <input
+                name="email"
                 type="text"
                 id="email"
-                value={email.value}
+                value={email}
                 onChange={this.handleChange}
               />
               <label htmlFor="phone">Phone Number:</label>
               <input
+                name="phone"
                 type="text"
                 id="phone"
-                value={phone.value}
+                value={phone}
                 onChange={this.handleChange}
               />
             </div>
           ) : (
-            <div>
-              {userName}
-              {email}
-              {phone}
+            <div id="userInput">
+              <text>Name: {userName}</text>
+              <text>E-mail: {email}</text>
+              <text>Phone Number: {phone}</text>
             </div>
           )}
         </form>
