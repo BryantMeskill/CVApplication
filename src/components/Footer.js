@@ -4,7 +4,7 @@ import logo from "../img/github.png";
 class Footer extends React.Component {
   render() {
     return (
-      <div id="footerDiv">
+      <div className="footerDiv">
         <text>
           <img src={logo} alt="GitHub logo" />
           /BryantMeskill

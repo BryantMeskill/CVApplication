@@ -24,16 +24,16 @@ class General extends React.Component {
     const { isEditing } = this.props;
 
     return (
-      <div id="section">
-        <h1 id="subtitle">General</h1>
+      <div className="section">
+        <h1 className="subtitle">General</h1>
         <form>
           {isEditing ? (
-            <div id="inputContainer">
+            <div className="inputContainer">
               <label htmlFor="userName">Name:</label>
               <input
                 name="userName"
                 type="text"
-                id="userName"
+                className="userName"
                 value={userName}
                 onChange={this.handleChange}
               />
@@ -41,7 +41,7 @@ class General extends React.Component {
               <input
                 name="email"
                 type="text"
-                id="email"
+                className="email"
                 value={email}
                 onChange={this.handleChange}
               />
@@ -49,13 +49,13 @@ class General extends React.Component {
               <input
                 name="phone"
                 type="text"
-                id="phone"
+                className="phone"
                 value={phone}
                 onChange={this.handleChange}
               />
             </div>
           ) : (
-            <div id="userInput">
+            <div className="userInput general">
               <text>Name: {userName}</text>
               <text>E-mail: {email}</text>
               <text>Phone Number: {phone}</text>

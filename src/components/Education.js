@@ -18,16 +18,16 @@ class Education extends React.Component {
     const { school, major, date } = this.state;
     const { isEditing } = this.props;
     return (
-      <div id="section">
-        <h1 id="subtitle">Education</h1>
+      <div className="section">
+        <h1 className="subtitle">Education</h1>
         <form>
           {isEditing ? (
-            <div id="inputContainer">
+            <div className="inputContainer">
               <label type="text" htmlFor="school">
                 University Name/Highschool or Equivalent:
               </label>
               <input
-                id="school"
+                className="school"
                 value={school.value}
                 onChange={this.handleChange}
               />
@@ -35,7 +35,7 @@ class Education extends React.Component {
                 Major/Expertise:
               </label>
               <input
-                id="major"
+                className="major"
                 value={major.value}
                 onChange={this.handleChange}
               />
@@ -43,13 +43,13 @@ class Education extends React.Component {
                 Date(s) attended:
               </label>
               <input
-                id="date"
+                className="date"
                 value={date.value}
                 onChange={this.handleChange}
               />
             </div>
           ) : (
-            <div id="userInput">
+            <div className="userInput education">
               <text>University Name/Highschool or Equivalent: {school}</text>
               <text>Major/Expertise: {major}</text>
               <text>Date(s) attended: {date}</text>
