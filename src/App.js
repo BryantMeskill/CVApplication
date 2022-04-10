@@ -24,12 +24,12 @@ class App extends React.Component {
   render() {
     const { isEditing } = this.state;
     return (
-      <div id="section">
+      <div className="section">
         <Header />
         <General isEditing={isEditing} />
         <Education isEditing={isEditing} />
         <Experience isEditing={isEditing} />
-        <button id="submit" onClick={this.toggleIsEditing}>
+        <button className="submit" onClick={this.toggleIsEditing}>
           {isEditing ? "Save" : "Edit"}
         </button>
         <Footer />
