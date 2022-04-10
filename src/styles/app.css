@@ -2,24 +2,36 @@
   box-sizing: border-box;
 }
 
+@keyframes slide-in {
+  from {
+    margin-left: 500px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
 body {
   background-color: rgb(36, 36, 36);
   color: rgb(202, 201, 201);
 }
 
-#title {
+.title {
   display: flex;
   justify-content: center;
   font-size: 45px;
   font-family: "Roboto", sans-serif;
 }
 
-#subtitle {
+.subtitle {
   font-family: "roboto", sans-serif;
   padding-top: 25px;
 }
 
-#section {
+.section {
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -29,7 +41,7 @@ body {
   position: relative;
 }
 
-#inputContainer {
+.inputContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +53,7 @@ input {
   font-size: 30px;
 }
 
-#submit {
+.submit {
   font-size: 20px;
 }
 
@@ -50,7 +62,7 @@ text {
   margin: 5px;
 }
 
-#userInput {
+.userInput {
   border: solid 3px rgb(91, 129, 245);
   border-radius: 10px;
   display: flex;
@@ -59,7 +71,19 @@ text {
   font-family: "roboto", sans-serif;
 }
 
-#footerDiv {
+.general {
+  animation: slide-in 1s;
+}
+
+.education {
+  animation: slide-in 1.2s;
+}
+
+.experience {
+  animation: slide-in 1.4s;
+}
+
+.footerDiv {
   position: static;
   bottom: 0;
   font-size: 30px;
