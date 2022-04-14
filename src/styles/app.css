@@ -39,6 +39,7 @@ body {
   flex-direction: column;
   font-size: 20px;
   position: relative;
+  animation: slide-in 1s;
 }
 
 .inputContainer {
@@ -51,6 +52,8 @@ body {
 
 input {
   font-size: 30px;
+  background-color: rgb(25, 25, 25);
+  color: aliceblue;
 }
 
 .submit {
