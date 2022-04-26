@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const General = ({ isEditing }) => {
   const [formData, setFormData] = useState({
     userName: "",
+    website: "",
     email: "",
     phone: "",
   });
@@ -16,37 +17,43 @@ const General = ({ isEditing }) => {
   };
 
   return (
-    <div className="section">
-      <h1 className="subtitle">General</h1>
+    <div>
       {isEditing ? (
         <form className="inputContainer">
+          <h1 className="subtitle">General</h1>
           <label htmlFor="userName">Name:</label>
           <input
             name="userName"
-            className="userName"
             value={formData.userName}
+            onChange={handleFormChange}
+          />
+          <label htmlFor="website">Website: </label>
+          <input
+            name="website"
+            value={formData.website}
             onChange={handleFormChange}
           />
           <label htmlFor="email">Email: </label>
           <input
             name="email"
-            className="email"
             value={formData.email}
             onChange={handleFormChange}
           />
           <label htmlFor="phone">Phone: </label>
           <input
             name="phone"
-            className="phone"
             value={formData.phone}
             onChange={handleFormChange}
           />
         </form>
       ) : (
-        <div className="userInput general">
-          <span>Name: {formData.userName}</span>
-          <span>Email: {formData.email}</span>
-          <span>Phone: {formData.phone}</span>
+        <div className="output general">
+          <span className="name">{formData.userName}</span>
+          <div className="userOutput">
+            <span className="website">{formData.website}</span>
+            <span className="email">{formData.email}</span>
+            <span className="phone">{formData.phone}</span>
+          </div>
         </div>
       )}
     </div>

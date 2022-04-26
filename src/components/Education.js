@@ -15,10 +15,10 @@ const Education = ({ isEditing }) => {
   };
 
   return (
-    <div className="section">
-      <h1 className="subtitle">Education</h1>
+    <div>
       {isEditing ? (
         <form className="inputContainer">
+          <h1 className="subtitle">Education</h1>
           <label htmlFor="school">
             University Name/Highschool or Equivalent:
           </label>
@@ -44,12 +44,12 @@ const Education = ({ isEditing }) => {
           />
         </form>
       ) : (
-        <div className="userInput general">
+        <div className="output education">
+          <h2 className="subtitleOutput">Education</h2>
           <span>
-            University Name/Highschool or Equivalent: {formData.school}
+            <b>{formData.school}</b> <em>{formData.date}</em>
           </span>
-          <span>Major/Expertise: {formData.major}</span>
-          <span>Date(s) attended: {formData.date}</span>
+          <span>{formData.major}</span>
         </div>
       )}
     </div>

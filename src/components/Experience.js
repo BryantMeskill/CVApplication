@@ -16,10 +16,10 @@ const Experience = ({ isEditing }) => {
   };
 
   return (
-    <div className="section">
-      <h1 className="subtitle">Experience</h1>
+    <div>
       {isEditing ? (
         <form className="inputContainer">
+          <h1 className="subtitle">Experience</h1>
           <label htmlFor="company">Company Name:</label>
           <input
             name="company"
@@ -50,11 +50,18 @@ const Experience = ({ isEditing }) => {
           />
         </form>
       ) : (
-        <div className="userInput experience">
-          <span>Company Name: {formData.company}</span>
-          <span>Position/Title: {formData.position}</span>
-          <span>Job Duties: {formData.tasks}</span>
-          <span>Year(s) Worked: {formData.worked}</span>
+        <div className="output experience">
+          <h2 className="subtitleOutput">Experience</h2>
+          <span>
+            <b>{formData.position}</b>
+          </span>
+          <span>
+            <em>{formData.company}</em> {formData.worked}
+          </span>
+          <span>
+            <b>Duties:</b> {formData.tasks}
+          </span>
+          <span></span>
         </div>
       )}
     </div>
