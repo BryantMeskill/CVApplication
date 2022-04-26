@@ -2,6 +2,10 @@
 
 A very simple CV Application built using Webpack, React, and CSS. 
 
+A live demo can be found [here](https://bryantmeskill.github.io/CVApplication/).
+
+![Image of CV Application](https://github.com/BryantMeskill/CVApplication/blob/main/src/img/Example.png)
+
 This project was originally built using entirely class components, and was later updated using entirely functional components and hooks.
 You can still view the original class component code as a comment at the bottom of each respective file.
 
