@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
 import General from "./components/General";
+import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
@@ -16,9 +17,12 @@ const App = () => {
   return (
     <div className="section">
       <Header />
-      <General isEditing={isEditing} />
-      <Education isEditing={isEditing} />
-      <Experience isEditing={isEditing} />
+      <div className={`${isEditing ? "" : "wrapper"}`}>
+        <General isEditing={isEditing} />
+        <Skills isEditing={isEditing} />
+        <Experience isEditing={isEditing} />
+        <Education isEditing={isEditing} />
+      </div>
       <button className="submit" onClick={toggleIsEditing}>
         {isEditing ? "Save" : "Edit"}
       </button>
