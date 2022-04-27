@@ -14,6 +14,6 @@ This was my first React project, and as such, many skills were honed during the 
 * Building Class components in React
 * Building functional components in React
 * Using hooks to gain access to state in functional components
+* Conditionally rendering different parts of the project depending on state
 * Elevating state for use across multiple child components
-* Working with the React synthetic event to dynamically get user inputs
-
+* Working with the React synthetic event to dynamically get user input
